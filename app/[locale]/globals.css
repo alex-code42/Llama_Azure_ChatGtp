@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: #f2f2f2;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* Hauptfarbe als Hintergrund (#d1b173) */
+    --foreground: 0 0% 16%; /* Dunkler Text für guten Kontrast auf dem goldenen Hintergrund (#2a2a2a) */
+  
+    --muted: 42 56% 80%; /* Ein hellerer, abgedämpfter Ton für sekundäre Elemente (#e7d3ab) */
+    --muted-foreground: 35 28% 27%; /* Dunklerer Text für abgedämpfte Elemente (#5f4b32) */
+  
+    --popover: 39 45% 64%; /* Gleiche Hauptfarbe für Popovers (#d1b173) */
+    --popover-foreground: 0 0% 16%; /* Dunkler Text im Popover (#2a2a2a) */
+  
+    --card: 39 61% 85%; /* Noch hellerer Ton für Karten (#f2e2c4) */
+    --card-foreground: 0 0% 16%; /* Dunkler Text auf Karten (#2a2a2a) */
+  
+    --border: 39 41% 60%; /* Ein etwas dunklerer Ton für Grenzen (#c5a56b) */
+    --input: 39 41% 60%; /* Gleiche Farbe für Eingaben (#c5a56b) */
+  
+    --primary: 36 40% 51%; /* Ein kräftigerer Braunton für primäre Elemente (#b38c51) */
+    --primary-foreground: 0 0% 100%; /* Weißer Text auf primären Elementen (#ffffff) */
+  
+    --secondary: 42 56% 80%; /* Hellere Version der Hauptfarbe für sekundäre Elemente (#e7d3ab) */
+    --secondary-foreground: 35 28% 27%; /* Dunklerer Text auf sekundären Elementen (#5f4b32) */
+  
+    --accent: 36 52% 40%; /* Akzentfarbe in einem kräftigen Braunton (#9b6d32) */
+    --accent-foreground: 0 0% 100%; /* Weißer Text auf Akzenten (#ffffff) */
+  
+    --destructive: 0 74% 36%; /* Rot für destruktive Aktionen (#b91c1c) */
+    --destructive-foreground: 0 0% 100%; /* Weißer Text auf destruktiven Elementen (#ffffff) */
+  
+    --ring: 39 45% 64%; /* Hauptfarbe für Ringe und Fokus-Indikatoren (#d1b173) */
+  
+    --radius: 0.5rem; /* Standard Border Radius */
+  }
+
+  .dark {
+    --background: 210 100% 12%; /* Dunkelblau als Hintergrund (#00263e) */
+    --foreground: 0 0% 98%; /* Heller Text im Dunkelmodus (nahezu weiß) */
+
+    --muted: 210 30% 20%; /* Dunkelblau für abgedämpfte Elemente */
+    --muted-foreground: 0 0% 80%; /* Helleres Grau für den Text auf muted-Hintergründen */
+
+    --popover: 210 100% 15%; /* Etwas helleres Dunkelblau für Popovers */
+    --popover-foreground: 0 0% 98%; /* Weißer Text im Popover */
+
+    --card: 210 100% 15%; /* Sehr dunkles Blau für Karten-Hintergrund */
+    --card-foreground: 0 0% 98%; /* Weißer Text auf Karten */
+
+    --border: 210 100% 20%; /* Etwas helleres Blau für Grenzen */
+    --input: #4aa6ff; /* Dunkelblau für Eingaben */
+
+    --primary: 210 100% 30%; /* Helleres Blau für primäre Elemente */
+    --primary-foreground: 0 0% 100%; /* Weiß für Text auf primären Elementen */
+
+    --secondary: 210 100% 15%; /* Dunkelblau für sekundäre Elemente */
+    --secondary-foreground: 0 0% 98%; /* Weißer Text auf sekundären Elementen */
+
+    --accent: 210 100% 35%; /* Hellblau für Akzente */
+    --accent-foreground: 0 0% 98%; /* Weißer Text auf Akzenten */
+
+    --destructive: 0 80% 50%; /* Rot für destruktive Aktionen */
+    --destructive-foreground: 0 0% 98%; /* Weißer Text auf destruktiven Elementen */
+
+    --ring: 210 100% 30%; /* Blau für Ringe und Fokus-Indikatoren */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.btn-primary {
+  background-color: #d1b173;
+  color: black;
+  transition: background-color 0.3s ease-in-out; /* Übergangseffekt */
+  transition-delay: 0.2s; /* Delay von 0,2 Sekunden */
+}
+
+
+.btn-hover {
+  background-color: #a38c5c;
+  color: white;
+}
+/* Farbe  */
+.tabler-icon:hover {
+  stroke: #d1b173; /* Ändert die Strichfarbe der SVG */
+}
+
+.bg-brigther-20{
+  background-color: #4aa6ff;
+}
+
